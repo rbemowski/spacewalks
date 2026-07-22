@@ -1,0 +1,27 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Spacewalks
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Ryan
+    family-names: Bemowski
+    affiliation: University of Wisconsin-Madison
+  - given-names: Sarah
+    family-names: Stevens
+    email: sarah.stevens@wisc.edu
+    affiliation: University of Wisconsin-Madison
+  - given-names: Stephen
+    family-names: Meyer
+    affiliation: University of Wisconsin-Madison
+repository-code: 'https://github.com/rbemowski/spacewalks'
+abstract: >-
+  A Python Script to Analyze NASA extravehicular activity
+  data
+keywords:
+  - NASA
+  - Extravehicular activity
