@@ -174,6 +174,7 @@ def summary_duration_by_astronaut(df):
     subset = subset.reset_index() # make group index a column in the dataframe
     return subset
 
+# When is __name__ != __main__?
 if __name__ == "__main__":
 
     if len(sys.argv) < 3:
