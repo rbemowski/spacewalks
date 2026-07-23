@@ -4,7 +4,7 @@ import sys
 import re
 
 
-def main(input_file, output_file, graph_file):
+def main(input_file, output_file, duration_by_astronaut_output_file, graph_file):
     print("--START--")
 
     # Read the data from JSON file
@@ -18,6 +18,11 @@ def main(input_file, output_file, graph_file):
 
     # Sort dataframe by date ready to be plotted (date values are on x-axis)
     eva_data.sort_values('date', inplace=True)
+
+    # Calculate summary table for total EVA per astronaut
+    duration_by_astronaut_df = summary_duration_by_astronaut(eva_data)
+    # Save summary duration data by each astronaut to CSV file
+    write_dataframe_to_csv(duration_by_astronaut_df, duration_by_astronaut_output_file)
 
     # Plot cumulative time spent in space over years
     plot_cumulative_time_in_space(eva_data, graph_file)
@@ -181,5 +186,6 @@ if __name__ == "__main__":
         print('Using custom input and output filenames')
 
     graph_file = './cumulative_eva_graph.png'
+    duration_by_astronaut_output_file = 'results/duration_by_astronaut.csv'
 
-    main(input_file, output_file, graph_file)
+    main(input_file, output_file, duration_by_astronaut_output_file, graph_file)
